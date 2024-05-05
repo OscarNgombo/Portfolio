@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfolio-44bfc": {
+      "hosting": {
+        "portfolio": [
+          "portfolio-44bfc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfolio-44bfc"
+  }
+}
