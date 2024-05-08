@@ -42,7 +42,6 @@ export class HomeComponent {
   selectedList!: { name: string; link: string; }[];
   isMenuVisible: boolean = false;
   router: Router;
-  kaziIpo: boolean = false;
 
 
   constructor(router: Router) {
@@ -50,17 +49,16 @@ export class HomeComponent {
     this.setGreeting();
   }
 
-  toggleMenu() {
-    this.isMenuVisible = !this.isMenuVisible;
-    if (this.toggleIsCorrect.bind(this)){
-      this.kaziIpo = !this.kaziIpo;
-    }
-  }
+  // toggleMenu() {
+  //   this.isMenuVisible = !this.isMenuVisible;
+  //   if (this.toggleIsCorrect.bind(this)){
+  //     this.kaziIpo = !this.kaziIpo;
+  //   }
+  // }
 
 
   toggleIsCorrect() {
     this.isCorrectVisible = !this.isCorrectVisible;
-    this.kaziIpo = !this.kaziIpo;
     this.isMenuVisible = false;
 
   }

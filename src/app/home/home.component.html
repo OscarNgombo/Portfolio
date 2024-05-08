@@ -1,28 +1,19 @@
 <!-- Element 1 -->
-<div class="container overflow-hidden">
-    <button (click)="toggleMenu()" type="button" class="rounded-lg border-2 border-neutral-50 px-7 pb-[8px] pt-[8px] text-sm font-medium uppercase leading-normal text-neutral-50 hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10">
-        <svg xmlns="http://www.w3.org/2000/svg " width="48 " height="48 " viewBox="0 0 48 48 ">
-          <path
-            fill="white "
-            d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14h36v-4H6v4z "
-          />
-        </svg>
-
-      </button>
-    <div *ngIf="isMenuVisible" class="bg-transparent text-white shadow-lg rounded pb-8 px-5 fixed bottom-0 left-5 right-5 z-50 ">
-        <div>
+<div class="container overflow-hidden relative">
+    <div class="bg-transparent font-bold text-xl text-white shadow-lg rounded p-4 md:fixed top-0 left-0 right-0 z-50 ">
+        <span class="md:p-8 ">
             <button routerLink="/home">Home</button> |
             <button routerLink="/about">About</button>
-        </div>
+        </span>
     </div>
-    <div class="relative sm:text-start py-10">
+    <div class="sm:text-start">
 
         <!-- view One   -->
         <div [@dropAndBounce] *ngIf="!isCorrectVisible" class="pt-16">
             <div class="item-center mt-28 text-white p-8">
                 <h1 class="my-4 text-4xl md:text-6xl font-extrabold sm:text-wrap">{{ greeting }}</h1>
                 <p class="mb-4 text-xl text-left">
-                    I'm Oscar Ngombo specialized in Mobile and Web development, with expertise in crafting innovative solutions using Flutter for mobile apps and Angular for frontend web development.
+                    I'm <b>Oscar Ngombo</b> specialized in Mobile and Web development, with expertise in crafting innovative solutions using Flutter for mobile apps and Angular for frontend web development.
                 </p>
                 <p class="mb-4 text-xl text-left">
                     My backend prowess shines through with Django and Rest API, while my familiarity with cloud technologies, particularly Google Firebase/Firestore, ensures robust and scalable applications.
@@ -109,7 +100,7 @@
         </div>
     </div>
     <!-- Display the list shared by the clicked div -->
-    <div *ngIf="selectedList && kaziIpo" class="bg-transparent text-white shadow-lg rounded pb-8 px-5 fixed bottom-0 left-5 right-5 z-50 ">
+    <div *ngIf="selectedList" class="bg-transparent text-white shadow-lg rounded pb-8 px-5 fixed bottom-0 left-5 right-5 z-50 ">
         <h2 class="text-2xl font-bold text-center ">Projects</h2>
         <ul>
             <li class="p-4" *ngFor="let item of selectedList ">
